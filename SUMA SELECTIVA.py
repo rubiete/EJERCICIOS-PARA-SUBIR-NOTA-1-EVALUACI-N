@@ -26,52 +26,48 @@ def cifra_mayor(numero):
     return respuesta
 
 def numero_ordenado(numero):    
-    exp=0    
-    n=numero
-    expo=0
+    expo=-1
     cifra=0
     final=0
     nu=0
-    ex=0
-    exponente=0        
-    while n>0:               
-        n/10
-        exp=exp+1                  
-    ex=exp
+    exp=-1    
     n=numero
-    while n>0:        
+    while n>=1:               
+        n=n/10
+        exp=exp+1      
+    ex=exp
+    n=numero    
+    while n>=1:        
         expo=expo+1        
         nu=n
         cifra=0
-        while nu>0:            
+        while nu>=1:            
             if (nu%10)>cifra:
                 cifra=nu%10            
                 ex=exp
                 nu=nu/10
             else:
                 ex=ex-1
-                nu=nu/10
-        n=(n-(cifra*(10**ex)))        
-           
-        final=final+(cifra*10**expo)
-        exp=exp-1
+                nu=nu/10        
+        n=(n-(cifra*(10**ex)))           
+        final=final+(cifra*10**expo)        
     return final
             
 def suma_selectiva():
-    numero=input("Inserte su número entero: ")
+    numero=input("Inserte su nÃºmero entero: ")
     print "1. Devuelve la suma de sus cifras pares"
     print "2. Devuelve la suma de sus cifras impares"
     print "3. Devuelve la mayor de sus cifras"
-    print "4. Devuelve un número con las mismas cifras ordenadas de menor a mayor"
-    opcion=input("¿Qué deseas hacer con tu número? Selecciona un número: ")
+    print "4. Devuelve un nÃºmero con las mismas cifras ordenadas de menor a mayor"
+    opcion=input("Â¿QuÃ© deseas hacer con tu nÃºmero? Selecciona un nÃºmero: ")
     if opcion==1:
-        print "La suma de las cifras pares de tu número es: " ,suma_cifras_pares(numero),
+        print "La suma de las cifras pares de tu nÃºmero es: " ,suma_cifras_pares(numero),
     if opcion==2:
-        print "La suma de las cifras impares de tu número es: " ,suma_cifras_impares(numero),   
+        print "La suma de las cifras impares de tu nÃºmero es: " ,suma_cifras_impares(numero),   
     if opcion==3:
-        print "La cifra mayor de tu número es: " ,cifra_mayor(numero),
+        print "La cifra mayor de tu nÃºmero es: " ,cifra_mayor(numero),
     if opcion==4:
-        print "El número ordenado de menor a mayor es: " ,numero_ordenado(numero),
+        print "El nÃºmero ordenado de menor a mayor es: " ,numero_ordenado(numero),
 
 suma_selectiva()
 
